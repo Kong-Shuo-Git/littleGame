@@ -1,0 +1,30 @@
+<nav class="bg-white shadow-sm mb-8">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fa fa-gamepad text-2xl text-primary mr-2"></i>
+                <h1 class="text-2xl font-bold text-dark">小游戏集合</h1>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a th:href="@{/index}" class="text-gray-700 hover:text-primary transition-colors">首页</a>
+                <a th:href="@{/cellular}" class="text-gray-700 hover:text-primary transition-colors">元胞复制机</a>
+                <a th:href="@{/minesweeper}" class="text-gray-700 hover:text-primary transition-colors">扫雷</a>
+                <a th:href="@{/snake}" class="text-gray-700 hover:text-primary transition-colors">贪吃蛇</a>
+                <a th:href="@{/gobang}" class="text-gray-700 hover:text-primary transition-colors">五子棋</a>
+                <a th:href="@{/puzzle}" class="text-gray-700 hover:text-primary transition-colors">数字华容道</a>
+                <span th:if="${session.username != null}" class="text-gray-700">
+                    <i class="fa fa-user-circle text-primary mr-1"></i>
+                    <span th:text="${session.username}"></span>
+                </span>
+                <a th:href="@{/auth/logout}" th:if="${session.username != null}"
+                   class="text-gray-700 hover:text-primary transition-colors">
+                    <i class="fa fa-sign-out mr-1"></i> 退出
+                </a>
+                <a th:href="@{/auth/login}" th:if="${session.username == null}"
+                   class="text-gray-700 hover:text-primary transition-colors">
+                    <i class="fa fa-sign-in mr-1"></i> 登录
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
