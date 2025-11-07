@@ -102,7 +102,7 @@ public class AuthController {
     public String register(@RequestParam String username, @RequestParam String password,
                            @RequestParam String confirmPassword,
                            RedirectAttributes redirectAttributes) {
-        // 简单的注册验证
+        // 注册验证
         if (username == null || username.trim().isEmpty()) {
             redirectAttributes.addFlashAttribute("error", "用户名不能为空");
             return "redirect:/auth/register";
