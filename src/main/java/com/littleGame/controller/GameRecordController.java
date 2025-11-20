@@ -3,11 +3,11 @@ package com.littleGame.controller;
 import com.littleGame.pojo.GameRecord;
 import com.littleGame.pojo.User;
 import com.littleGame.service.GameRecordService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
